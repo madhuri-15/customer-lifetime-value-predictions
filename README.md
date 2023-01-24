@@ -17,13 +17,13 @@ This is a regression problem, where we will predict the customer lifetime value 
 
 ## 3. Approach
 
-#### 3.1 Exploratory Data Analysis
+### 3.1 Exploratory Data Analysis
 
 Basic data analysis is performed on a dataset to find if data contain any missing values, outliers, or duplicate records. After removing duplicates from the data, the dataset was split into training, validation, and test data in a ratio of 70:20:10 respectively for further analysis.
 
 The output variable `cltv` is highly right-skewed with outliers. After removing outliers from the data, following hypothesis ANOVA test performed on features.
 
-##### 3.1.1 ANOVA Hypothesis Test
+#### 3.1.1 ANOVA Hypothesis Test
 
 One-way ANOVA has been performed, to find the correlation between categorical features and continuous output variables.
 
@@ -34,7 +34,7 @@ One-way ANOVA has been performed, to find the correlation between categorical fe
 
 The result shows that there is no statistically significant difference in means of a group of gender, and qualification, while there is a statistically significant difference in means for column `income`, `vintage`, `marital status`, `area`, and `type_of_policy`.
 
-##### 3.1.2 Data Preprocessing
+#### 3.1.2 Data Preprocessing
 
 - The feature variable `claim_amount` is highly right-skewed, so log transformation is performed on both `claim_amount` and `cltv` features to make distribution Gaussian.
   
